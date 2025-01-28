@@ -388,7 +388,7 @@ const renderHtml = (
   applyStylesheets(opts.stylesheets, parsed.rootElement);
 
   return (
-    <View style={[...styles, fontSizeStyle]}>
+    <View style={{ ...styles, ...fontSizeStyle }}>
       {renderElements(parsed.rootElement.content, opts)}
     </View>
   );

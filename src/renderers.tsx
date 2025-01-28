@@ -185,7 +185,7 @@ export const renderCell: HtmlRenderer = ({ style, element, children }) => {
     }
   }
 
-  return <View style={[baseStyles, ...style]}>{children}</View>;
+  return <View style={{ ...baseStyles, ...style }}>{children}</View>;
 };
 
 const renderers: HtmlRenderers = {
@@ -310,7 +310,7 @@ const renderers: HtmlRenderers = {
       overrides.borderTopWidth = 0;
     }
 
-    return <View style={[...style, overrides]}>{children}</View>;
+    return <View style={{ ...style, ...overrides }}>{children}</View>;
   },
   tr: ({ style, children }) => (
     <View wrap={false} style={style}>
